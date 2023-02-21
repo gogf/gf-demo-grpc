@@ -1,0 +1,17 @@
+// protoc --go_out=plugins=grpc:. *.proto
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "/pbentity";
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+    uint64 Id       = 1;
+    string Passport = 2;
+    string Nickname = 3;
+    google.protobuf.Timestamp CreateAt = 4;
+    google.protobuf.Timestamp UpdateAt = 5;
+}
