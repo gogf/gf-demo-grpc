@@ -5,9 +5,9 @@ import (
 
 	"github.com/gogf/gf/v2/errors/gerror"
 
-	v1 "github.com/gogf/gf-demo-user/v2/api/v1"
-	"github.com/gogf/gf-demo-user/v2/internal/model"
-	"github.com/gogf/gf-demo-user/v2/internal/service"
+	v1 "github.com/gogf/gf-demo-grpc/v2/api/v1"
+	"github.com/gogf/gf-demo-grpc/v2/internal/model"
+	"github.com/gogf/gf-demo-grpc/v2/internal/service"
 )
 
 // User is the controller for user.

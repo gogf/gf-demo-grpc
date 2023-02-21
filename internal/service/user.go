@@ -7,8 +7,8 @@ package service
 import (
 	"context"
 
-	"github.com/gogf/gf-demo-user/v2/internal/model"
-	"github.com/gogf/gf-demo-user/v2/internal/model/entity"
+	"github.com/gogf/gf-demo-grpc/v2/internal/model"
+	"github.com/gogf/gf-demo-grpc/v2/internal/model/entity"
 )
 
 type IUser interface {

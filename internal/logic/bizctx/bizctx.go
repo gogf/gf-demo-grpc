@@ -5,9 +5,9 @@ import (
 
 	"github.com/gogf/gf/v2/net/ghttp"
 
-	"github.com/gogf/gf-demo-user/v2/internal/consts"
-	"github.com/gogf/gf-demo-user/v2/internal/model"
-	"github.com/gogf/gf-demo-user/v2/internal/service"
+	"github.com/gogf/gf-demo-grpc/v2/internal/consts"
+	"github.com/gogf/gf-demo-grpc/v2/internal/model"
+	"github.com/gogf/gf-demo-grpc/v2/internal/service"
 )
 
 type (

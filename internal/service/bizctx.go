@@ -8,7 +8,7 @@ package service
 import (
 	"context"
 
-	"github.com/gogf/gf-demo-user/v2/internal/model"
+	"github.com/gogf/gf-demo-grpc/v2/internal/model"
 	"github.com/gogf/gf/v2/net/ghttp"
 )
 
