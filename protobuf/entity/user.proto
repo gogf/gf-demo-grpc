@@ -2,9 +2,9 @@
 
 syntax = "proto3";
 
-package pbentity;
+package entity;
 
-option go_package = "/pbentity";
+option go_package = "/entity";
 
 import "google/protobuf/timestamp.proto";
 
