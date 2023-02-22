@@ -78,6 +78,7 @@ PROTO_FILES=$(shell find protobuf -name *.proto)
 .PHONY: pb
 pb:
 	protoc \
+	--proto_path=./ \
 	--proto_path=./protobuf/ \
 	--proto_path=./protobuf/entity/ \
 	--go_out=paths=source_relative:./protocol/ \
