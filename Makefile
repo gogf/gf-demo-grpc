@@ -71,16 +71,7 @@ deploy:
 	kubectl   apply -f $(ROOT_DIR)/temp/kustomize.yaml; \
 	kubectl   patch -n $(NAMESPACE) deployment/$(DEPLOY_NAME) -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"$(shell date +%s)\"}}}}}";
 
-
-PROTO_FILES=$(shell find protobuf -name *.proto)
-
-# Install/Update to the latest CLI tool.
+# Parse and generate protobuf go files.
 .PHONY: pb
 pb:
-	protoc \
-	--proto_path=./ \
-	--proto_path=./protobuf/ \
-	--proto_path=./protobuf/entity/ \
-	--go_out=paths=source_relative:./protocol/ \
-	--go-grpc_out=paths=source_relative:./protocol/ \
-	$(PROTO_FILES)
+	gf gen pb

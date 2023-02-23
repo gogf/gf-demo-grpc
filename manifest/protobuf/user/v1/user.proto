@@ -4,9 +4,9 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "/user";
+option go_package = "github.com/gogf/gf-demo-grpc/api/user/v1";
 
-import "protobuf/entity/user.proto";
+import "pbentity/user.proto";
 
 service User{
     rpc Create(CreateReq) returns (CreateRes) {}

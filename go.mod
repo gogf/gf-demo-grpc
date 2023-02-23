@@ -1,4 +1,4 @@
-module github.com/gogf/gf-demo-grpc/v2
+module github.com/gogf/gf-demo-grpc
 
 go 1.15
 

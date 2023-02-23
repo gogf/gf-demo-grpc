@@ -5,5 +5,5 @@
 package logic
 
 import (
-	_ "github.com/gogf/gf-demo-grpc/v2/internal/logic/user"
+	_ "github.com/gogf/gf-demo-grpc/internal/logic/user"
 )

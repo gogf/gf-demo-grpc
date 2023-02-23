@@ -4,9 +4,9 @@ import (
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 	"github.com/gogf/gf/v2/os/gctx"
 
-	_ "github.com/gogf/gf-demo-grpc/v2/internal/logic"
+	_ "github.com/gogf/gf-demo-grpc/internal/logic"
 
-	"github.com/gogf/gf-demo-grpc/v2/internal/cmd"
+	"github.com/gogf/gf-demo-grpc/internal/cmd"
 )
 
 func main() {
