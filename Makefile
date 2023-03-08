@@ -74,4 +74,4 @@ deploy:
 # Parse and generate protobuf go files.
 .PHONY: pb
 pb:
-	gf gen pb
+	@gf gen pb

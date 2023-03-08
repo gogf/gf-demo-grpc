@@ -13,7 +13,7 @@ var (
 		Usage: "main",
 		Brief: "start grpc server of simple goframe demos",
 		Func: func(ctx context.Context, parser *gcmd.Parser) (err error) {
-
+			grpcx.
 			return nil
 		},
 	}

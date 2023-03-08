@@ -1,5 +1,4 @@
-CREATE TABLE `user`
-(
+CREATE TABLE `user` (
     `id`        int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'User ID',
     `passport`  varchar(45) NOT NULL COMMENT 'User Passport',
     `password`  varchar(45) NOT NULL COMMENT 'User Password',
