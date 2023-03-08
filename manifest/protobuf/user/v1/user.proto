@@ -34,7 +34,7 @@ message GetListReq {
     int32 Size = 2;
 }
 message GetListRes {
-    repeated entity.User User = 1;
+    repeated entity.User Users = 1;
 }
 
 message DeleteReq {
