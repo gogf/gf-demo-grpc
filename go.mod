@@ -10,7 +10,7 @@ require (
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/gogf/gf/contrib/drivers/mysql/v2 v2.3.3
 	github.com/gogf/gf/contrib/registry/file/v2 v2.3.3 // indirect
-	github.com/gogf/gf/contrib/rpc/grpcx/v2 v2.3.4-0.20230309015637-39529d081011
+	github.com/gogf/gf/contrib/rpc/grpcx/v2 v2.3.4-0.20230309082252-7f20535b827b
 	github.com/gogf/gf/v2 v2.3.3
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect

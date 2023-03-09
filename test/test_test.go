@@ -100,8 +100,22 @@ func Test_Delete(t *testing.T) {
 			Id: 1,
 		})
 		if err != nil {
-			g.Log().Fatalf(ctx, `get user failed: %+v`, err)
+			g.Log().Fatalf(ctx, `delete user failed: %+v`, err)
 		}
 		fmt.Println(getOneRes.User)
+	})
+}
+
+func Test_Validation(t *testing.T) {
+	gtest.C(t, func(t *gtest.T) {
+		var (
+			ctx  = gctx.GetInitCtx()
+			conn = grpcx.Client.MustNewGrpcClientConn("demo")
+			user = v1.NewUserClient(conn)
+		)
+		_, err := user.Delete(ctx, &v1.DeleteReq{})
+		if err != nil {
+			g.Log().Fatalf(ctx, `delete user failed: %+v`, err)
+		}
 	})
 }

@@ -9,11 +9,12 @@
 package v1
 
 import (
+	reflect "reflect"
+	sync "sync"
+
 	pbentity "github.com/gogf/gf-demo-grpc/api/pbentity"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -28,9 +29,9 @@ type CreateReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Passport string `protobuf:"bytes,1,opt,name=Passport,proto3" json:"Passport,omitempty"`
-	Password string `protobuf:"bytes,2,opt,name=Password,proto3" json:"Password,omitempty"`
-	Nickname string `protobuf:"bytes,3,opt,name=Nickname,proto3" json:"Nickname,omitempty"`
+	Passport string `protobuf:"bytes,1,opt,name=Passport,proto3" json:"Passport,omitempty" v:"required"` // v: required
+	Password string `protobuf:"bytes,2,opt,name=Password,proto3" json:"Password,omitempty" v:"required"` // v: required
+	Nickname string `protobuf:"bytes,3,opt,name=Nickname,proto3" json:"Nickname,omitempty" v:"required"` // v: required
 }
 
 func (x *CreateReq) Reset() {
@@ -129,7 +130,7 @@ type GetOneReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty" v:"required"` // v: required
 }
 
 func (x *GetOneReq) Reset() {
@@ -223,8 +224,8 @@ type GetListReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Page int32 `protobuf:"varint,1,opt,name=Page,proto3" json:"Page,omitempty"`
-	Size int32 `protobuf:"varint,2,opt,name=Size,proto3" json:"Size,omitempty"`
+	Page int32 `protobuf:"varint,1,opt,name=Page,proto3" json:"Page,omitempty" d:"1"`  // d: 1
+	Size int32 `protobuf:"varint,2,opt,name=Size,proto3" json:"Size,omitempty" d:"10"` // d: 10
 }
 
 func (x *GetListReq) Reset() {
@@ -325,7 +326,9 @@ type DeleteReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	// v: min:1#
+	// v: Please select the user to be deleted.
+	Id uint64 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty" v:"min:1#Please select the user to be deleted."`
 }
 
 func (x *DeleteReq) Reset() {

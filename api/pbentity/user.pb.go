@@ -9,11 +9,12 @@
 package pbentity
 
 import (
+	reflect "reflect"
+	sync "sync"
+
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -28,11 +29,11 @@ type User struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       uint64                 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`
-	Passport string                 `protobuf:"bytes,2,opt,name=Passport,proto3" json:"Passport,omitempty"`
-	Nickname string                 `protobuf:"bytes,3,opt,name=Nickname,proto3" json:"Nickname,omitempty"`
-	CreateAt *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=CreateAt,proto3" json:"CreateAt,omitempty"`
-	UpdateAt *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=UpdateAt,proto3" json:"UpdateAt,omitempty"`
+	Id       uint64                 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty" dc:"User ID."`                                                 // User ID.
+	Passport string                 `protobuf:"bytes,2,opt,name=Passport,proto3" json:"Passport,omitempty" dc:"User passport for identifying a certain user."` // User passport for identifying a certain user.
+	Nickname string                 `protobuf:"bytes,3,opt,name=Nickname,proto3" json:"Nickname,omitempty" dc:"User nickname which can be customized."`        // User nickname which can be customized.
+	CreateAt *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=CreateAt,proto3" json:"CreateAt,omitempty" dc:"Created time."`                                 // Created time.
+	UpdateAt *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=UpdateAt,proto3" json:"UpdateAt,omitempty" dc:"Updated time."`                                 // Updated time.
 }
 
 func (x *User) Reset() {

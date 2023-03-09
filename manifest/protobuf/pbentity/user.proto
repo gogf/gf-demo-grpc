@@ -9,9 +9,9 @@ option go_package = "github.com/gogf/gf-demo-grpc/api/pbentity";
 import "google/protobuf/timestamp.proto";
 
 message User {
-    uint64 Id       = 1;
-    string Passport = 2;
-    string Nickname = 3;
-    google.protobuf.Timestamp CreateAt = 4;
-    google.protobuf.Timestamp UpdateAt = 5;
+    uint64 Id       = 1; // User ID.
+    string Passport = 2; // User passport for identifying a certain user.
+    string Nickname = 3; // User nickname which can be customized.
+    google.protobuf.Timestamp CreateAt = 4; // Created time.
+    google.protobuf.Timestamp UpdateAt = 5; // Updated time.
 }

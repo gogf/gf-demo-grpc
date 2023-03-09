@@ -1,11 +1,14 @@
-# HTTP Server.
-server:
-  address: ":8000"
-  dumpRouterMap: true
-  routeOverWrite: true
+# GRPC Server.
+grpc:
+  address: ""
+  name:    "demo"
+  logPath: ""
+  logStdout: true
+  errorStack: true
+  errorLogEnabled: true
+  errorLogPattern: "error-{Ymd}.log"
   accessLogEnabled: true
-  openapiPath: "/api.json"
-  swaggerPath: "/swagger"
+  accessLogPattern: "access-{Ymd}.log"
 
 # Global logging.
 logger:

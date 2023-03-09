@@ -16,28 +16,30 @@ service User{
 }
 
 message CreateReq {
-    string Passport = 1;
-    string Password = 2;
-    string Nickname = 3;
+    string Passport = 1; // v: required
+    string Password = 2; // v: required
+    string Nickname = 3; // v: required
 }
 message CreateRes {}
 
 message GetOneReq {
-    uint64 Id = 1;
+    uint64 Id = 1; // v: required
 }
 message GetOneRes {
     entity.User User = 1;
 }
 
 message GetListReq {
-    int32 Page = 1;
-    int32 Size = 2;
+    int32 Page = 1; // d: 1
+    int32 Size = 2; // d: 10
 }
 message GetListRes {
     repeated entity.User Users = 1;
 }
 
 message DeleteReq {
+    // v: min:1#
+    // v: Please select the user to be deleted.
     uint64 Id = 1;
 }
 message DeleteRes {}
