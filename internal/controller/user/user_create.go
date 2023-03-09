@@ -9,7 +9,6 @@ import (
 )
 
 func (*Controller) Create(ctx context.Context, req *v1.CreateReq) (res *v1.CreateRes, err error) {
-	res = &v1.CreateRes{}
 	_, err = dao.User.Ctx(ctx).Data(do.User{
 		Passport: req.Passport,
 		Password: req.Password,
