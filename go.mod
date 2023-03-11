@@ -9,10 +9,10 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/gogf/gf/contrib/drivers/mysql/v2 v2.3.3
-	github.com/gogf/gf/contrib/registry/file/v2 v2.3.3 // indirect
 	github.com/gogf/gf/contrib/rpc/grpcx/v2 v2.3.4-0.20230309082252-7f20535b827b
 	github.com/gogf/gf/v2 v2.3.3
 	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/google/wire v0.5.0
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect

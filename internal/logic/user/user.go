@@ -6,18 +6,17 @@ import (
 	"github.com/gogf/gf-demo-grpc/api/pbentity"
 	"github.com/gogf/gf-demo-grpc/internal/dao"
 	"github.com/gogf/gf-demo-grpc/internal/model/do"
-	"github.com/gogf/gf-demo-grpc/internal/service"
 )
 
 type (
-	sUser struct{}
+	User struct{}
 )
 
-func init() {
-	service.RegisterUser(&sUser{})
+func NewLogicUser() *User {
+	return &User{}
 }
 
-func (s *sUser) GetById(ctx context.Context, uid uint64) (*pbentity.User, error) {
+func (s *User) GetById(ctx context.Context, uid uint64) (*pbentity.User, error) {
 	var user *pbentity.User
 	err := dao.User.Ctx(ctx).Where(do.User{
 		Id: uid,
@@ -25,7 +24,7 @@ func (s *sUser) GetById(ctx context.Context, uid uint64) (*pbentity.User, error)
 	return user, err
 }
 
-func (s *sUser) DeleteById(ctx context.Context, uid uint64) error {
+func (s *User) DeleteById(ctx context.Context, uid uint64) error {
 	_, err := dao.User.Ctx(ctx).Where(do.User{
 		Id: uid,
 	}).Delete()
