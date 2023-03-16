@@ -30,8 +30,8 @@ message GetOneRes {
 }
 
 message GetListReq {
-    int32 Page = 1; // d: 1
-    int32 Size = 2; // d: 10
+    int32 Page = 1;
+    int32 Size = 2;
 }
 message GetListRes {
     repeated entity.User Users = 1;
