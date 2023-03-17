@@ -26,7 +26,7 @@ message GetOneReq {
     uint64 Id = 1; // v: required
 }
 message GetOneRes {
-    entity.User User = 1;
+    pbentity.User User = 1;
 }
 
 message GetListReq {
@@ -34,7 +34,7 @@ message GetListReq {
     int32 Size = 2;
 }
 message GetListRes {
-    repeated entity.User Users = 1;
+    repeated pbentity.User Users = 1;
 }
 
 message DeleteReq {

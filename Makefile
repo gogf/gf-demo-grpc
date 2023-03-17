@@ -75,3 +75,8 @@ deploy:
 .PHONY: pb
 pb:
 	@gf gen pb
+
+# Generate protobuf go files for tables.
+.PHONY: pbentity
+pbentity:
+	@gf gen pbentity

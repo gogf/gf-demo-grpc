@@ -7,3 +7,7 @@ gfcli:
         removePrefix: "gf_"
         descriptionTag: true
         noModelComment: true
+
+    pbentity:
+      - link: "mysql:root:12345678@tcp(127.0.0.1:3306)/test"
+        tables: "user"
