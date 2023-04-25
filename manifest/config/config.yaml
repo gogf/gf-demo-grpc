@@ -1,7 +1,7 @@
 # GRPC Server.
 grpc:
   address: ""
-  name:    "demo"
+  name: "demo"
   logPath: ""
   logStdout: true
   errorStack: true
