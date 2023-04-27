@@ -1,6 +1,5 @@
 # A simple GRPC service
 
-
 # GoFrame Sites
 
 ### GoFrame Repo

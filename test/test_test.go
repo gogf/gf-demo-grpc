@@ -2,11 +2,12 @@ package test
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/test/gtest"
-	"testing"
 
 	v1 "github.com/gogf/gf-demo-grpc/api/user/v1"
 )
