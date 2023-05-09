@@ -1,6 +1,6 @@
 module github.com/gogf/gf-demo-grpc
 
-go 1.15
+go 1.18
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
