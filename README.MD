@@ -1,11 +1,3 @@
 # A simple GRPC service
 
-# GoFrame Sites
-
-### GoFrame Repo
-
-* [https://github.com/gogf/gf](https://github.com/gogf/gf)
-
-### GoFrame Home
-
-* [https://goframe.org](https://goframe.org) (中文)
+It is moved to https://github.com/gogf/examples/tree/main/practices/user-grpc-service
